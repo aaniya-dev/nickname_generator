@@ -2,6 +2,7 @@
 # nickname generator v2 - todo: add colors later
 
 import streamlit as st
+from datetime import date
 
 def make_nickname(name, dob):
     # split dob and get day month
@@ -39,7 +40,12 @@ st.title("Secret Nickname Generator 2026 ✨")
 st.write("Get ur personalized aesthetic name based on ur real info")
 
 name = st.text_input("Full name")
-dob = st.date_input("Date of birth", value=None) 
+dob = st.date_input(
+    "Date of birth",
+    min_value=date(1980, 1, 1),
+    max_value=date(2026, 12, 31),
+    value=date(2005, 1, 1)
+)
 old_nick = st.text_input("Current nickname (optional)")
 
 if st.button("Generate My New Name"):
