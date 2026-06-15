@@ -1,2 +1,2 @@
 # nickname_generator
-python boom for fun
+python-boom for fun
