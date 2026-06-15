@@ -20,18 +20,18 @@ def make_nickname(name, dob):
     
     # month based words cause it looks cool
     month_words = {
-        1:"Frost",2:"Cloud",3:"Storm",4:"Blaze",
-        5:"Drift",6:"Solar",7:"Tidal",8:"Astro",
-        9:"Cyber",10:"Ghost",11:"Nova",12:"Glitch"
+        1:"King",2:"Pookie",3:"Cute",4:"Moody",
+        5:"Pookie",6:"Solar",7:"Baddass",8:"Bugaboo",
+        9:"Beauty",10:"Ghost",11:"Heart-y",12:"Glitch"
     }
     
     # day decides the animal thing
     if day <= 10:
-        end = "Fox"
+        end = "Rabbit"
     elif day <= 20:
         end = "Wolf" 
     else:
-        end = "Bear"
+        end = "Lion"
     
     nickname = name_part.capitalize() + month_words.get(month,"Myst") + str(day) + end
     return nickname
